@@ -14,8 +14,6 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ZonaDeCarga {
     private BlockingQueue<Pedido> pedidos = new ArrayBlockingQueue<>(10);
-    private AtomicInteger contador = new AtomicInteger(1);
-    //contador.incrementAdnGet(); // Aumenta en 1
 
     public void agregarPedido(Pedido p) throws InterruptedException {
         pedidos.put(p);
