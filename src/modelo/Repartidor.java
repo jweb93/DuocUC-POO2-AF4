@@ -1,4 +1,4 @@
-package model;
+package modelo;
 
 /**
  * Representa un repartidor que recibirá pedido y los despachará
@@ -11,6 +11,10 @@ public class Repartidor implements Runnable{
     public Repartidor(String nombre, ZonaDeCarga zonaDeCarga) {
         this.nombre = nombre;
         this.zonaDeCarga = zonaDeCarga;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     @Override

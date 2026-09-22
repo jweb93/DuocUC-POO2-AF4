@@ -1,4 +1,4 @@
-package model;
+package modelo;
 
 /**
  * Representa una dirección física donde se entregará un pedido

@@ -1,4 +1,4 @@
-package model;
+package modelo;
 /**
  * Representa un pedido que debe ser entregado a una dirección
  */
@@ -14,7 +14,7 @@ public class Pedido {
         this.direccionEntrega = direccionEntrega;
         this.tipoPedido = tipoPedido;
         this.estado = EstadoPedido.PENDIENTE;
-        System.out.println("Pedido #" + idPedido + " agregado. Destino: " + direccionEntrega.toString());
+        System.out.println("Pedido #" + idPedido + " (" + tipoPedido.getDescripcion() + ") agregado. Destino: " + direccionEntrega.toString());
     }
 
     //Getter and Setter

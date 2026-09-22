@@ -1,7 +1,6 @@
-package vistas;
+package vista;
 
 import controlador.GestorDatos;
-import model.ZonaDeCarga;
 
 import javax.swing.*;
 import java.awt.*;
@@ -56,8 +55,13 @@ public class VentanaPrincipal extends JFrame {
             });
         });
 
-        btnIniciarEntregas.addActionListener(e -> {});
-
+        btnIniciarEntregas.addActionListener(e -> {
+            SwingUtilities.invokeLater(() -> {
+                VentanaDespacho ventas = new VentanaDespacho(gestorDatos);
+                ventas.setLocationRelativeTo(this);
+                ventas.setVisible(true);
+            });
+        });
     }
 
 }

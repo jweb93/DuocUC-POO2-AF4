@@ -1,5 +1,5 @@
 ![Duoc UC](https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png)
-# 🧠 Actividad Sumativa 2 – Desarrollo Orientado a Objetos II
+# 🧠 Actividad Formativa 4 – Desarrollo Orientado a Objetos II
 
 ## 💻 Proyecto: SpeedFast
 ## 👤 Autor del proyecto
@@ -11,16 +11,17 @@
 ---
 
 ## 📘 Descripción general del sistema
-Este proyecto da respuesta a la Actividad Sumativa 2 de la asignatura
+Este proyecto da respuesta a la Actividad Formativa 4 de la asignatura
 *Desarrollo Orientado a Objetos II*.
 
-Se desarrolla un sistema concurrente de pedidos almacenados en una BlockingQueue,
-repartidores gestionados como hilos mediante ExecutorService y atomicidad en ID de los pedidos
-mediante AtomicInteger.
+Se desarrolló un programa que permite la gestión (creacion y lectura) visual de
+Pedidos mediante Java Swing. Adicionalmente se incorporó la opción de simular
+despachos a fin de reutilizar el codigo de entregas anteriores.
 
 El sistema creado se organiza en paquetes, aplica principios de
 composición (clase Dirección), encapsulamiento (atributos privados y
 métodos getter/setter) y mantiene documentación de código usando Javadocs.
+
 
 ---
 
@@ -30,14 +31,22 @@ métodos getter/setter) y mantiene documentación de código usando Javadocs.
 docs
 └── index.html
 src
-├── model
+├── controlador
+│   └── GestorDatos.java
+├── modelo
 │   ├── Direccion.java
 │   ├── EstadoPedido.java
 │   ├── Pedido.java
 │   ├── Repartidor.java
+│   ├── TipoPedido.java
 │   └── ZonaDeCarga.java
-└── ui
-    └── Main.java
+├── ui
+│   └── Main.java
+└── vista
+    ├── VentanaDespacho.java
+    ├── VentanaListaPedidos.java
+    ├── VentanaPrincipal.java
+    └── VentanaRegistroPedido.java
 ````
 
 ---
@@ -48,7 +57,7 @@ src
 1. Clone el repositorio desde GitHub:
 
 ```bash
-git clone https://github.com/jweb93/DuocUC-POO2-AS2.git
+git clone https://github.com/jweb93/DuocUC-POO2-AF4.git
 ```
 
 2. Abra el proyecto en IntelliJ IDEA.
@@ -60,8 +69,8 @@ git clone https://github.com/jweb93/DuocUC-POO2-AS2.git
 
 ---
 
-**Repositorio GitHub:** https://github.com/jweb93/DuocUC-POO2-AS2
-**Fecha de entrega:** \[14/09/2026]
+**Repositorio GitHub:** https://github.com/jweb93/DuocUC-POO2-AF4
+**Fecha de entrega:** \[21/09/2026]
 
 ---
 

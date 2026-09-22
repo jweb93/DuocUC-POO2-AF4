@@ -1,8 +1,8 @@
-package vistas;
+package vista;
 
 import controlador.GestorDatos;
-import model.Direccion;
-import model.TipoPedido;
+import modelo.Direccion;
+import modelo.TipoPedido;
 
 import javax.swing.*;
 import java.awt.*;

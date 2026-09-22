@@ -1,7 +1,7 @@
-package vistas;
+package vista;
 
 import controlador.GestorDatos;
-import model.Pedido;
+import modelo.Pedido;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -21,14 +21,14 @@ public class VentanaListaPedidos extends JFrame {
 
         // Configuración base de la ventana
         setTitle("Listado de pedidos - SpeedFast");
-        setSize(400, 400);
+        setSize(800, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
 
         // Scroll central con tabla de datos
         modeloTabla = new DefaultTableModel(
-                new String[]{"ID", "Calle", "Número", "Comuna", "Tipo del pedido"},
+                new String[]{"ID", "Calle", "Número", "Comuna", "Tipo del pedido", "Estado"},
                 0
         );
 
@@ -59,6 +59,7 @@ public class VentanaListaPedidos extends JFrame {
         // Primero borramos los registros cargados
         modeloTabla.setRowCount(0);
 
+        // Luego se cargan los registros
         for(Pedido pedido : gestorDatos.getPedidos()){
             modeloTabla.addRow(new Object[]{
                     pedido.getIdPedido(),

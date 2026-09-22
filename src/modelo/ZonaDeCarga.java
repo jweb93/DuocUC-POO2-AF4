@@ -1,8 +1,7 @@
-package model;
+package modelo;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Representa la zona de carga de pedidos mediante el uso de BlockingQueue.
@@ -21,5 +20,9 @@ public class ZonaDeCarga {
 
     public Pedido retirarPedido() throws InterruptedException {
         return pedidos.poll(); // Si la cola está vacía, se retorna null
+    }
+
+    public BlockingQueue<Pedido> getPedidos() {
+        return pedidos;
     }
 }
